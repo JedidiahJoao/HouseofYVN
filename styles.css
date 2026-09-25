@@ -41,7 +41,7 @@ button { font: inherit; }
 .menu-toggle span:not(.sr-only) { display: block; width: 25px; height: 1px; background: currentColor; margin: 6px 0; transition: transform .3s; }
 
 .hero { position: relative; min-height: 100svh; background: var(--espresso); color: var(--ivory); overflow: hidden; }
-.hero-image { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center right; animation: hero-in 1.3s cubic-bezier(.2,.8,.2,1) both; }
+.hero-image { position: absolute; inset: 0 0 0 auto; width: 62%; height: 100%; object-fit: contain; object-position: right center; background: var(--espresso); animation: hero-in 1.3s cubic-bezier(.2,.8,.2,1) both; }
 .hero-wash { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(25,17,12,.82) 0%, rgba(25,17,12,.38) 43%, rgba(25,17,12,.02) 70%), linear-gradient(0deg, rgba(20,13,9,.35), transparent 38%); }
 .hero-copy { position: absolute; z-index: 2; left: clamp(25px, 8vw, 130px); top: 50%; transform: translateY(-46%); max-width: 720px; }
 .eyebrow { margin: 0 0 27px; font-size: 10px; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; }
@@ -73,7 +73,7 @@ button { font: inherit; }
 .pathways-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 3vw, 45px); }
 .pathway-card { position: relative; min-height: 690px; display: flex; align-items: flex-end; overflow: hidden; color: var(--ivory); }
 .pathway-card img { position: absolute; inset: 0; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
-.pathway-card:first-child img { object-position: top center; }
+.pathway-card:first-child img { object-position: center 58%; }
 .pathway-card:last-child img { object-position: center; }
 .pathway-card:last-child .pathway-overlay { background: linear-gradient(0deg, rgba(52,8,24,.95) 0%, rgba(38,17,20,.12) 75%); }
 .pathway-card:last-child .pathway-content span { color: #e0a9b3; }
@@ -243,7 +243,7 @@ button { font: inherit; }
   .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
   .nav-enquire { margin-top: 10px; font-family: var(--sans); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
   .menu-open .site-header { color: var(--ivory); background: transparent; border-color: transparent; }
-  .hero-image { object-position: 64% center; }
+  .hero-image { width: 100%; object-fit: cover; object-position: 56% center; }
   .hero-wash { background: linear-gradient(90deg, rgba(25,17,12,.78), rgba(25,17,12,.18)), linear-gradient(0deg, rgba(20,13,9,.52), transparent 50%); }
   .hero-copy { left: 25px; right: 20px; top: 48%; }
   .hero-note { right: 25px; bottom: 25px; }
@@ -274,7 +274,7 @@ button { font: inherit; }
   body { font-size: 14px; }
   .hero { min-height: 760px; }
   .pathway-card { min-height: 560px; }
-  .hero-image { object-position: 68% center; }
+  .hero-image { object-position: 56% center; }
   .hero-wash { background: linear-gradient(90deg, rgba(25,17,12,.74), rgba(25,17,12,.05)), linear-gradient(0deg, rgba(20,13,9,.65), transparent 65%); }
   .hero h1 { font-size: clamp(56px, 15vw, 68px); }
   .hero-intro { max-width: 270px; }
