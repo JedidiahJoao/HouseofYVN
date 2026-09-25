@@ -114,7 +114,7 @@ button { font: inherit; }
 .founder-copy > p:not(.eyebrow):not(.lead) { color: #68594f; }
 .founder-copy .text-link { margin-top: 25px; }
 .founder-image-wrap { position: relative; padding-right: 50px; }
-.founder-image-wrap img { aspect-ratio: 4 / 5.2; object-fit: cover; object-position: top; }
+.founder-image-wrap img { aspect-ratio: 4 / 5.2; object-fit: cover; object-position: center; }
 .vertical-note { position: absolute; right: 0; top: 0; writing-mode: vertical-rl; font-size: 9px; letter-spacing: .24em; text-transform: uppercase; }
 .image-caption { margin: 18px 0 0; font-family: var(--serif); font-size: 15px; line-height: 1.45; }
 
