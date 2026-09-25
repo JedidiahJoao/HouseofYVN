@@ -101,6 +101,33 @@ button { font: inherit; }
 .vertical-note { position: absolute; right: 0; top: 0; writing-mode: vertical-rl; font-size: 9px; letter-spacing: .24em; text-transform: uppercase; }
 .image-caption { margin: 18px 0 0; font-family: var(--serif); font-size: 15px; line-height: 1.45; }
 
+
+.school { position: relative; overflow: hidden; background: var(--ivory); }
+.school::before { content: "SCHOOL"; position: absolute; top: 105px; right: -20px; color: rgba(184,154,101,.09); font-family: var(--serif); font-size: clamp(90px, 16vw, 250px); line-height: .7; letter-spacing: -.05em; pointer-events: none; }
+.school-intro { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(50px, 9vw, 150px); align-items: end; margin-bottom: clamp(70px, 9vw, 135px); }
+.school-intro-copy { max-width: 480px; padding-bottom: 5px; }
+.school-intro-copy > p:last-child { color: #68594f; }
+.school-program { position: relative; min-height: 590px; display: flex; align-items: center; padding: clamp(55px, 8vw, 120px); overflow: hidden; background: var(--espresso); color: var(--ivory); }
+.school-program::after { content: ""; position: absolute; right: -8%; bottom: -40%; width: 56%; aspect-ratio: 1; border: 1px solid rgba(184,154,101,.35); border-radius: 50%; box-shadow: 0 0 0 55px rgba(184,154,101,.05), 0 0 0 110px rgba(184,154,101,.035); }
+.program-mark { position: absolute; top: 0; right: 0; width: 120px; height: 120px; display: grid; place-content: center; text-align: center; background: var(--gold); color: var(--espresso); font-family: var(--serif); font-size: 27px; line-height: .9; letter-spacing: .12em; }
+.program-mark i { margin-top: 9px; font-size: 11px; }
+.program-copy { position: relative; z-index: 2; max-width: 680px; }
+.program-copy h3 { margin: 0; font-family: var(--serif); font-size: clamp(60px, 7vw, 108px); font-weight: 400; line-height: .86; letter-spacing: -.04em; }
+.program-copy h3 em { color: var(--gold); font-weight: 400; }
+.program-copy > p:not(.eyebrow) { max-width: 550px; margin: 38px 0 32px; color: rgba(243,238,229,.68); }
+.program-journey { position: absolute; z-index: 2; right: 42px; bottom: 35px; margin: 0; color: rgba(243,238,229,.55); font-size: 9px; letter-spacing: .17em; text-transform: uppercase; }
+.curriculum-heading { display: flex; justify-content: space-between; align-items: end; padding: clamp(80px, 9vw, 130px) 0 35px; border-bottom: 1px solid var(--line); }
+.curriculum-heading .eyebrow, .curriculum-heading > p { margin-bottom: 0; }
+.curriculum-heading > p:last-child { color: #68594f; }
+.curriculum-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.course-card { min-height: 300px; padding: 38px 34px 35px 0; border-bottom: 1px solid var(--line); }
+.course-card:not(:nth-child(3n+1)) { padding-left: 34px; border-left: 1px solid var(--line); }
+.course-card span { display: block; margin-bottom: 45px; color: var(--gold); font-size: 9px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.course-card h3 { margin: 0 0 18px; max-width: 250px; font-family: var(--serif); font-size: clamp(25px, 2.3vw, 36px); font-weight: 400; line-height: 1.12; }
+.course-card p { margin: 0; max-width: 330px; color: #68594f; font-size: 13px; }
+.school-cta { display: flex; justify-content: space-between; align-items: center; gap: 30px; margin-top: 75px; padding: 40px 45px; background: var(--cocoa); color: var(--ivory); }
+.school-cta p { margin: 0; color: rgba(243,238,229,.68); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+
 .instagram { background: var(--paper); }
 .instagram-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 65px; }
 .instagram-handle { font-size: 11px; letter-spacing: .17em; text-transform: uppercase; padding-bottom: 7px; border-bottom: 1px solid; }
@@ -147,7 +174,7 @@ button { font: inherit; }
   .hero-copy { left: 25px; right: 20px; top: 48%; }
   .hero-note { right: 25px; bottom: 25px; }
   .scroll-cue { display: none; }
-  .manifesto-grid, .services-heading, .method, .founder { grid-template-columns: 1fr; }
+  .manifesto-grid, .services-heading, .method, .founder, .school-intro { grid-template-columns: 1fr; }
   .manifesto-grid { gap: 50px; }
   .services-heading { gap: 30px; }
   .service { grid-template-columns: 45px 1fr; }
@@ -158,6 +185,9 @@ button { font: inherit; }
   .method-copy { padding-left: 30px; padding-right: 30px; }
   .founder-copy { order: 2; }
   .founder-image-wrap { order: 1; max-width: 650px; }
+  .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
+  .course-card:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+  .course-card:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
   .site-footer { grid-template-columns: 1fr 1fr; }
 }
 
@@ -177,6 +207,15 @@ button { font: inherit; }
   .philosophy { min-height: 650px; }
   .founder { gap: 65px; }
   .founder-image-wrap { padding-right: 30px; }
+  .school-program { min-height: 610px; padding: 65px 25px; align-items: flex-start; }
+  .program-mark { width: 88px; height: 88px; font-size: 21px; }
+  .program-copy { margin-top: 80px; }
+  .program-journey { left: 25px; right: auto; }
+  .curriculum-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .curriculum-grid { grid-template-columns: 1fr; }
+  .course-card, .course-card:nth-child(even), .course-card:not(:nth-child(3n+1)) { min-height: auto; padding: 34px 0; border-left: 0; }
+  .course-card span { margin-bottom: 24px; }
+  .school-cta { align-items: flex-start; flex-direction: column; padding: 35px 25px; }
   .instagram-heading { align-items: flex-start; flex-direction: column; gap: 30px; }
   .editorial-grid { grid-template-columns: 1fr 1fr; align-items: start; }
   .editorial-card--wide { grid-column: 1 / -1; order: -1; }
