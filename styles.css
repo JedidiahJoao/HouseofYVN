@@ -62,6 +62,23 @@ button { font: inherit; }
 .manifesto-copy p:not(.lead) { color: #68594f; max-width: 500px; }
 .manifesto-copy .text-link { margin-top: 26px; }
 
+
+.pathways { background: var(--paper); }
+.pathways-heading { display: grid; grid-template-columns: .4fr 1.6fr; gap: 55px; align-items: start; margin-bottom: 70px; }
+.pathways-heading .eyebrow { padding-top: 10px; }
+.pathways-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 3vw, 45px); }
+.pathway-card { position: relative; min-height: 690px; display: flex; align-items: flex-end; overflow: hidden; color: var(--ivory); }
+.pathway-card img { position: absolute; inset: 0; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+.pathway-card:first-child img { object-position: top center; }
+.pathway-card:last-child img { object-position: center; }
+.pathway-card:hover img { transform: scale(1.025); }
+.pathway-overlay { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(27,18,13,.9) 0%, rgba(27,18,13,.12) 72%); }
+.pathway-content { position: relative; z-index: 1; width: 100%; padding: clamp(30px, 5vw, 65px); }
+.pathway-content span { display: block; margin-bottom: 22px; color: var(--gold); font-size: 9px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; }
+.pathway-content h3 { margin: 0; font-family: var(--serif); font-size: clamp(45px, 5vw, 76px); font-weight: 400; line-height: .9; }
+.pathway-content p { max-width: 420px; margin: 27px 0; color: rgba(243,238,229,.74); }
+.pathway-content strong { font-size: 10px; font-weight: 500; letter-spacing: .17em; text-transform: uppercase; border-bottom: 1px solid; }
+
 .services { background: var(--espresso); color: var(--ivory); }
 .services-heading { display: grid; grid-template-columns: 1.5fr .5fr; gap: 60px; align-items: end; margin-bottom: 90px; }
 .services-heading > p { max-width: 330px; color: rgba(243,238,229,.68); }
@@ -216,9 +233,11 @@ button { font: inherit; }
   .hero-copy { left: 25px; right: 20px; top: 48%; }
   .hero-note { right: 25px; bottom: 25px; }
   .scroll-cue { display: none; }
-  .manifesto-grid, .services-heading, .method, .founder, .school-intro { grid-template-columns: 1fr; }
+  .manifesto-grid, .services-heading, .method, .founder, .school-intro, .pathways-heading { grid-template-columns: 1fr; }
   .manifesto-grid { gap: 50px; }
   .services-heading { gap: 30px; }
+  .pathways-grid { grid-template-columns: 1fr; }
+  .pathway-card { min-height: 620px; }
   .service { grid-template-columns: 45px 1fr; }
   .service p, .service a { grid-column: 2; }
   .service a { justify-self: start; }
@@ -239,6 +258,7 @@ button { font: inherit; }
 @media (max-width: 600px) {
   body { font-size: 14px; }
   .hero { min-height: 760px; }
+  .pathway-card { min-height: 560px; }
   .hero-image { object-position: 68% center; }
   .hero-wash { background: linear-gradient(90deg, rgba(25,17,12,.74), rgba(25,17,12,.05)), linear-gradient(0deg, rgba(20,13,9,.65), transparent 65%); }
   .hero h1 { font-size: clamp(56px, 15vw, 68px); }
