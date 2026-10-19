@@ -1,6 +1,6 @@
 # House of YVN
 
-Luxury editorial website for House of YVN, a private styling studio by Yvonne.
+Luxury editorial website for House of YVN, a style strategy house by Yvonne.
 
 ## Local preview
 
