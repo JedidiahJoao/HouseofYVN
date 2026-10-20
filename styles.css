@@ -139,7 +139,9 @@ button { font: inherit; }
 .portfolio-copy .text-link { margin-top: 28px; }
 
 
-.flagship-section { background: var(--ivory); }
+.flagship-section { padding-bottom: 0; background: var(--ivory); }
+#courses { padding-top: 0; }
+#courses .curriculum-heading { padding-top: clamp(40px, 4vw, 60px); }
 .school-program { position: relative; min-height: 590px; display: flex; align-items: center; padding: clamp(55px, 8vw, 120px); overflow: hidden; background: var(--espresso); color: var(--ivory); }
 .school-program::after { content: ""; position: absolute; right: -8%; bottom: -40%; width: 56%; aspect-ratio: 1; border: 1px solid rgba(184,154,101,.35); border-radius: 50%; box-shadow: 0 0 0 55px rgba(184,154,101,.05), 0 0 0 110px rgba(184,154,101,.035); }
 .program-mark { position: absolute; top: 0; right: 0; width: 120px; height: 120px; display: grid; place-content: center; text-align: center; background: var(--gold); color: var(--espresso); font-family: var(--serif); font-size: 27px; line-height: .9; letter-spacing: .12em; }
