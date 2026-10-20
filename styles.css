@@ -115,19 +115,6 @@ button { font: inherit; }
 .pathway-card--audit .pathway-content span { color: #e0a9b3; }
 .pathway-card--audit:hover .pathway-content strong { color: var(--gold); }
 
-.method { display: grid; grid-template-columns: 1fr 1fr; min-height: 900px; background: var(--paper); }
-.method-image-wrap { position: relative; min-height: 720px; overflow: hidden; }
-.method-image-wrap img { height: 100%; object-fit: cover; }
-.method-stamp { position: absolute; right: -68px; top: 85px; width: 138px; height: 138px; display: grid; place-content: center; text-align: center; background: var(--espresso); color: var(--ivory); border-radius: 50%; font-family: var(--serif); font-size: 28px; line-height: .9; letter-spacing: .12em; }
-.method-stamp i { color: var(--gold); font-size: 12px; margin-top: 10px; }
-.method-copy { display: flex; flex-direction: column; justify-content: center; padding-left: clamp(60px, 9vw, 150px); padding-right: clamp(35px, 7vw, 110px); }
-.method-copy ol { margin: 65px 0 0; padding: 0; list-style: none; }
-.method-copy li { display: grid; grid-template-columns: 55px 1fr; gap: 20px; padding: 24px 0; border-top: 1px solid var(--line); }
-.method-copy li:last-child { border-bottom: 1px solid var(--line); }
-.method-copy li > span { color: var(--gold); font-family: var(--serif); font-size: 13px; }
-.method-copy h3 { margin: -7px 0 5px; font-family: var(--serif); font-size: 25px; font-weight: 400; }
-.method-copy li p { margin: 0; color: #68594f; }
-
 .philosophy { min-height: 78vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #080707; color: var(--ivory); }
 .philosophy blockquote { margin: 10px 0 40px; font-family: var(--serif); font-size: clamp(58px, 8vw, 125px); font-weight: 400; line-height: .9; letter-spacing: -.035em; }
 .philosophy > p:last-child { max-width: 510px; color: rgba(243,238,229,.65); }
@@ -251,15 +238,12 @@ button { font: inherit; }
   .hero-copy { left: 25px; right: 20px; top: 48%; }
   .hero-note { right: 25px; bottom: 25px; }
   .scroll-cue { display: none; }
-  .manifesto-grid, .method, .founder, .portfolio, .school-intro, .pathways-heading, .audience-intro, .audience-purpose { grid-template-columns: 1fr; }
+  .manifesto-grid, .founder, .portfolio, .school-intro, .pathways-heading, .audience-intro, .audience-purpose { grid-template-columns: 1fr; }
   .manifesto-grid { gap: 50px; }
   .pathways-grid { grid-template-columns: 1fr; }
   .division { grid-template-columns: 45px 1fr; }
   .division-copy { grid-column: 2; }
   .pathway-card { min-height: 620px; }
-  .method-image-wrap { min-height: 620px; }
-  .method-stamp { right: 20px; top: auto; bottom: -55px; }
-  .method-copy { padding-left: 30px; padding-right: 30px; }
   .founder-copy { order: 2; }
   .founder-image-wrap { order: 1; max-width: 650px; }
   .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
@@ -280,8 +264,6 @@ button { font: inherit; }
   .hero-intro { max-width: 270px; }
   .hero-note { font-size: 13px; }
   .section-number { margin-bottom: 45px; }
-  .method-image-wrap { min-height: 530px; }
-  .method-copy ol { margin-top: 50px; }
   .philosophy { min-height: 650px; }
   .founder { gap: 65px; }
   .division { grid-template-columns: 1fr; gap: 20px; }
