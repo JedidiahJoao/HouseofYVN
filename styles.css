@@ -196,6 +196,19 @@ button { font: inherit; }
 .course-card::after { content: "Explore ↗"; position: absolute; right: 28px; bottom: 25px; color: var(--burgundy); font-size: 8px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; opacity: 0; transform: translateY(5px); transition: opacity .3s, transform .3s; }
 .course-card:hover { background: rgba(91,22,44,.08); box-shadow: inset 0 3px 0 var(--burgundy); }
 .course-card:hover::after { opacity: 1; transform: none; }
+.corporate-coaching { position: relative; overflow: hidden; background: #080707; color: var(--ivory); }
+.corporate-coaching::after { content: ""; position: absolute; top: -20vw; right: -20vw; width: 55vw; height: 55vw; border: 1px solid rgba(184,154,101,.2); border-radius: 50%; box-shadow: 0 0 0 65px rgba(184,154,101,.035), 0 0 0 130px rgba(184,154,101,.02); pointer-events: none; }
+.corporate-intro { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(50px, 8vw, 130px); align-items: end; margin-bottom: clamp(65px, 8vw, 110px); }
+.corporate-intro .display { max-width: 900px; }
+.corporate-intro .lead { margin: 0; color: rgba(243,238,229,.72); }
+.corporate-modules { position: relative; z-index: 1; margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(243,238,229,.2); }
+.corporate-module { display: grid; grid-template-columns: 70px minmax(230px, .75fr) minmax(300px, 1.25fr); gap: clamp(25px, 5vw, 80px); align-items: start; padding: clamp(34px, 4vw, 55px) 0; border-bottom: 1px solid rgba(243,238,229,.2); }
+.corporate-module > span { color: var(--gold); font-family: var(--serif); font-size: 14px; }
+.corporate-module h3 { margin: -8px 0 0; font-family: var(--serif); font-size: clamp(28px, 3vw, 44px); font-weight: 400; line-height: 1.08; }
+.corporate-module p { max-width: 610px; margin: 0; color: rgba(243,238,229,.67); }
+.corporate-enquiry { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 40px; padding-top: clamp(55px, 7vw, 90px); }
+.corporate-enquiry > p { margin: 0; color: rgba(243,238,229,.7); font-family: var(--serif); font-size: clamp(22px, 2.5vw, 34px); }
+.corporate-enquiry .text-link { flex: 0 0 auto; }
 .school-page-cta { background: var(--burgundy); color: var(--ivory); text-align: center; }
 .school-page-cta .display { margin-bottom: 35px; }
 .school-page-cta > p:not(.eyebrow) { max-width: 580px; margin: 0 auto 35px; color: rgba(243,238,229,.68); }
@@ -246,6 +259,10 @@ button { font: inherit; }
   .course-card:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
   .course-card:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--line); }
   .course-content { grid-template-columns: 1fr; }
+  .corporate-intro { grid-template-columns: 1fr; }
+  .corporate-module { grid-template-columns: 45px 1fr; }
+  .corporate-module p { grid-column: 2; }
+  .corporate-enquiry { align-items: flex-start; flex-direction: column; }
   .course-aside { position: static; }
   .site-footer { grid-template-columns: 1fr 1fr; }
 }
@@ -279,6 +296,8 @@ button { font: inherit; }
   .curriculum-grid { grid-template-columns: 1fr; }
   .course-card, .course-card:nth-child(even), .course-card:not(:nth-child(3n+1)) { min-height: auto; padding: 34px 0; border-left: 0; }
   .course-card span { margin-bottom: 24px; }
+  .corporate-module { grid-template-columns: 1fr; gap: 14px; }
+  .corporate-module p { grid-column: auto; }
   .school-cta { align-items: flex-start; flex-direction: column; padding: 35px 25px; }
   .contact h2 { font-size: clamp(58px, 18vw, 90px); }
   .site-footer { grid-template-columns: 1fr; text-align: left; }
