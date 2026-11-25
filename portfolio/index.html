@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Selected House of YVN client journeys in style strategy, event styling and bespoke graduation styling." />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#211914" />
     <title>The YVN Case Files | House of YVN</title>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
@@ -22,7 +23,15 @@
         <a href="../#the-house">The House</a><a href="../#who-we-serve">Who We Serve</a><a href="../#experiences">Experiences</a><a href="../courses/">Style Courses</a><a href="../#client-journeys">Client Journeys</a><a class="nav-enquire" href="../#contact">Private enquiries</a>
       </nav>
     </header>
-    <main id="main" class="portfolio-main">      <section id="client-journeys" class="casefiles section-pad" aria-labelledby="portfolio-title">
+    <main id="main" class="portfolio-main">
+      <div class="portfolio-lock-bar">
+        <span>Private client portfolio</span>
+        <form method="post" action="/portfolio/">
+          <input type="hidden" name="action" value="lock" />
+          <button type="submit">Lock portfolio</button>
+        </form>
+      </div>
+      <section id="client-journeys" class="casefiles section-pad" aria-labelledby="portfolio-title">
         <div class="casefiles-heading">
           <div>
             <p class="eyebrow">Selected work · client journeys</p>

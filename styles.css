@@ -131,6 +131,10 @@ button { font: inherit; }
 
 .portfolio { display: grid; grid-template-columns: minmax(0, .95fr) minmax(320px, 1.05fr); gap: clamp(55px, 9vw, 145px); align-items: center; background: var(--paper); }
 .portfolio-main { padding-top: 76px; }
+.portfolio-lock-bar { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px clamp(25px, 8vw, 130px); background: var(--espresso); color: var(--ivory); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
+.portfolio-lock-bar form { margin: 0; }
+.portfolio-lock-bar button { padding: 8px 12px; border: 1px solid rgba(243,238,229,.45); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.portfolio-lock-bar button:hover { background: var(--ivory); color: var(--espresso); }
 .portfolio-image { position: relative; }
 .portfolio-image img { aspect-ratio: 4 / 5; height: 100%; object-fit: cover; }
 .portfolio-image span { display: block; margin-top: 16px; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
